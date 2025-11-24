@@ -1,0 +1,93 @@
+{
+  "name": "Destinys World: The Ancient One",
+  "description": "A revolutionary AI-powered survival horror game where an intelligent alien entity remembers everything you say and uses psychological manipulation against you. Choose to stop the killer, kill the killer, or join forces and travel to the homeworld.",
+  "version": "1.0.0",
+  "engine": "Unity",
+  "platform": "WebGL",
+  "author": "Mastercyril",
+  "category": "Horror",
+  "tags": [
+    "horror",
+    "survival",
+    "AI",
+    "psychological",
+    "open-world",
+    "VR-ready",
+    "multiplayer",
+    "story-driven"
+  ],
+  "viverse": {
+    "sdk_version": "2.0.0",
+    "avatar_support": true,
+    "vr_support": true,
+    "multiplayer": true,
+    "min_players": 1,
+    "max_players": 4,
+    "scene_count": 8,
+    "features": [
+      "VIVERSE Avatar System",
+      "Voice Chat Integration",
+      "Cross-platform Play",
+      "WebXR Support",
+      "Dynamic AI System",
+      "Persistent Memory",
+      "Multiple Endings"
+    ]
+  },
+  "game_systems": {
+    "ai": {
+      "psychological_profile": true,
+      "manipulation_engine": true,
+      "memory_fragments": true,
+      "dialogue_tracking": true
+    },
+    "world": {
+      "location_manager": true,
+      "locations": [
+        "Crash Site",
+        "Research Lab",
+        "Underground Facility",
+        "Alien Ship",
+        "Forest Zone",
+        "Mountain Pass",
+        "Abandoned Town",
+        "Homeworld Portal"
+      ]
+    },
+    "narrative": {
+      "quest_manager": true,
+      "ending_manager": true,
+      "endings": [
+        "Hero Ending - Stop the Ancient One",
+        "Hunter Ending - Kill the Ancient One",
+        "Alliance Ending - Join and travel to homeworld"
+      ]
+    }
+  },
+  "technical": {
+    "unity_version": "6.1+",
+    "webgl_compression": "Brotli",
+    "target_platforms": [
+      "Web",
+      "VR",
+      "Desktop"
+    ],
+    "required_plugins": [
+      "VIVERSE SDK",
+      "WebGL Publisher",
+      "Unity Registry"
+    ]
+  },
+  "deployment": {
+    "build_path": "./Build",
+    "index_file": "index.html",
+    "data_files": [
+      "Build/game.data",
+      "Build/game.framework.js",
+      "Build/game.loader.js",
+      "Build/game.wasm"
+    ]
+  },
+  "repository": "https://github.com/Mastercyril/AI-Alien-Horror-Game",
+  "license": "MIT"
+}
