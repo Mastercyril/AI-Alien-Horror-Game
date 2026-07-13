@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destiny's World: The Ancient One</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(180deg, #0a0a1a 0%, #1a0a0a 100%);
+            color: #00ff41;
+            overflow: hidden;
+            height: 100vh;
+        }
+        #game-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            padding: 20px;
+        }
+        #title {
+            text-align: center;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #00ff41, 0 0 20px #ff0000;
+            margin-bottom: 20px;
+            animation: flicker 3s infinite;
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        #game-screen {
+            flex: 1;
+            border: 2px solid #00ff41;
+            padding: 20px;
+            overflow-y: auto;
+            background: rgba(0,0,0,0.7);
+            box-shadow: 0 0 30px rgba(255,0,0,0.5);
+        }
+        #status-bar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #00ff41;
+            background: rgba(0,0,0,0.5);
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-label {
+            font-size: 0.8em;
+            color: #888;
+        }
+        .stat-value {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        #actions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        button {
+            background: #000;
+            color: #00ff41;
+            border: 2px solid #00ff41;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: #00ff41;
+            color: #000;
+            box-shadow: 0 0 20px #00ff41;
+        }
+        button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        .danger { border-color: #ff0000; color: #ff0000; }
+        .danger:hover { background: #ff0000; color: #fff; }
+        #story-text {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            min-height: 200px;
+        }
+        .alien-encounter {
+            color: #ff0000;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        #input-area {
+            margin-top: 10px;
+            display: none;
+        }
+        #player-input {
+            width: 100%;
+            padding: 10px;
+            background: #000;
+            color: #00ff41;
+            border: 2px solid #00ff41;
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="title">DESTINY'S WORLD: THE ANCIENT ONE</div>
+        
+        <div id="status-bar">
+            <div class="stat">
+                <div class="stat-label">HEALTH</div>
+                <div class="stat-value" id="health">100</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">FEAR</div>
+                <div class="stat-value" id="fear">0</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">LOCATION</div>
+                <div class="stat-value" id="location">Underground Lab</div>
+            </div>
+        </div>
+
+        <div id="game-screen">
+            <div id="story-text"></div>
+        </div>
+
+        <div id="input-area">
+            <input type="text" id="player-input" placeholder="Type your response...">
+        </div>
+
+        <div id="actions">
+            <button onclick="explore()">EXPLORE</button>
+            <button onclick="hide()">HIDE</button>
+            <button onclick="run()">RUN</button>
+            <button onclick="interact()">INTERACT</button>
+        </div>
+    </div>
+
+    <script>
+        const game = {
+            health: 100,
+            fear: 0,
+            location: 'Underground Lab',
+            alienNearby: false,
+            turn: 0,
+            locations: ['Underground Lab', 'Dark Corridor', 'Ventilation Shaft', 'Control Room', 'Escape Pod Bay'],
+            story: []
+        };
+
+        const stories = {
+            intro: "You wake up in a cold, sterile underground laboratory. Red emergency lights flicker overhead. The last thing you remember is the alarm... and then the screaming. Something has breached containment. Something ancient. Something not from this world.",
+            explore: [
+                "You cautiously move forward, your footsteps echoing in the darkness. Strange bio-luminescent slime coats the walls, pulsing with an unnatural rhythm.",
+                "The hallway stretches before you. You hear a distant scratching sound, like claws on metal. Your heart pounds.",
+                "You discover a sealed door. Through the window, you see movement in the shadows. Whatever it is, it's watching you.",
+                "Ancient hieroglyphics cover the walls here. They seem to writhe and shift when you're not looking directly at them."
+            ],
+            hide: [
+                "You duck into a storage locker, holding your breath. Something passes by outside... you can hear its breathing.",
+                "You squeeze under a desk. The creature's footsteps grow louder, then fade. You've avoided detection... for now.",
+                "You hide behind a pile of equipment. Through a gap, you see something impossibly long and black slither past."
+            ],
+            run: [
+                "You sprint down the corridor! Your lungs burn. Behind you, something shrieks - a sound no earthly creature should make.",
+                "You run blindly, crashing through doors. The thing is faster than you. Much faster.",
+                "You race toward safety, but the lights go out. In the darkness, you hear it breathing right behind you..."
+            ],
+            interact: [
+                "You access a terminal. Emergency log: 'Day 47: The artifact is not inactive. It's been waiting. Waiting for us to get close enough.'",
+                "You pick up a research note: 'The entity exhibits signs of intelligence far beyond human comprehension. It's learning us.'",
+                "You find a voice recorder. A scientist's panicked voice: 'It can imitate us. It sounds like Sarah now. Don't trust anyone who—' [STATIC]"
+            ]
+        };
+
+        function updateDisplay() {
+            document.getElementById('health').textContent = game.health;
+            document.getElementById('fear').textContent = game.fear;
+            document.getElementById('location').textContent = game.location;
+            
+            const storyDiv = document.getElementById('story-text');
+            storyDiv.innerHTML = game.story.join('<br><br>');
+            storyDiv.scrollTop = storyDiv.scrollHeight;
+        }
+
+        function addStory(text, isAlien = false) {
+            if (isAlien) {
+                game.story.push(`<span class="alien-encounter">${text}</span>`);
+            } else {
+                game.story.push(text);
+            }
+            updateDisplay();
+        }
+
+        function randomChoice(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        function checkAlienEncounter() {
+            game.turn++;
+            if (Math.random() < 0.3 + (game.turn * 0.05)) {
+                game.alienNearby = true;
+                game.fear += 20;
+                if (Math.random() < 0.5) {
+                    game.health -= 15;
+                    addStory("⚠ THE ANCIENT ONE STRIKES! It lunges from the shadows, its impossible form defying comprehension. You barely escape!", true);
+                } else {
+                    addStory("⚠ You sense it nearby. The air grows cold. Reality seems to bend. The Ancient One is hunting you...", true);
+                }
+            }
+        }
+
+        function explore() {
+            game.location = randomChoice(game.locations);
+            addStory(randomChoice(stories.explore));
+            game.fear += 5;
+            checkAlienEncounter();
+        }
+
+        function hide() {
+            addStory(randomChoice(stories.hide));
+            game.fear += 10;
+            if (game.alienNearby && Math.random() < 0.4) {
+                game.health -= 30;
+                addStory("IT FOUND YOU! Impossible appendages wrap around you. You tear free, bleeding...", true);
+            } else {
+                game.fear -= 15;
+                addStory("You remain hidden. Your fear subsides slightly.");
+            }
+            checkAlienEncounter();
+        }
+
+        function run() {
+            addStory(randomChoice(stories.run));
+            game.fear += 15;
+            game.location = randomChoice(game.locations);
+            if (Math.random() < 0.6) {
+                game.health -= 10;
+                addStory("You crash into something sharp. You're hurt but alive.");
+            }
+            checkAlienEncounter();
+        }
+
+        function interact() {
+            addStory(randomChoice(stories.interact));
+            game.fear += 8;
+            checkAlienEncounter();
+        }
+
+        function checkGameOver() {
+            if (game.health <= 0) {
+                addStory("=== GAME OVER ===<br>The Ancient One has claimed you. Your screams echo through eternity...", true);
+                document.querySelectorAll('button').forEach(btn => btn.disabled = true);
+            }
+            if (game.fear >= 100) {
+                addStory("=== GAME OVER ===<br>Your mind shatters. You become one with the darkness...", true);
+                document.querySelectorAll('button').forEach(btn => btn.disabled = true);
+            }
+        }
+
+        setInterval(() => {
+            checkGameOver();
+        }, 500);
+
+        // Start game
+        addStory(stories.intro);
+        updateDisplay();
+    </script>
+</body>
+</html>
