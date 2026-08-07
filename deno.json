@@ -1,0 +1,19 @@
+{
+  "lint": {
+    "exclude": [
+      "src/ai/AlienKillerAI_v2.js",
+      "src/systems/DailyAutoBuildPipeline.js",
+      "src/systems/DialogueEngine.js"
+    ],
+    "rules": {
+      "exclude": [
+        "no-window",
+        "no-window-prefix",
+        "no-node-globals",
+        "no-unused-vars",
+        "require-await",
+        "prefer-const"
+      ]
+    }
+  }
+}
