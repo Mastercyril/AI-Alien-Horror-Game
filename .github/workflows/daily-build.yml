@@ -1,0 +1,45 @@
+name: Daily Auto-Build
+
+# Destiny's World: The Ancient One — daily procedural content generation.
+# Every day at 09:00 UTC: generate fresh NPCs, locations, dialogue, and alien
+# behavior (deterministic, seeded by date — no API keys needed), then commit
+# the result so the live web demo picks it up on the next Pages deploy.
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-build
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate daily content
+        run: node scripts/daily-generate.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name "Destiny Auto-Build"
+          git config user.email "actions@users.noreply.github.com"
+          git add generated/
+          if git diff --cached --quiet; then
+            echo "No content changes today."
+          else
+            git commit -m "chore(daily-build): generated content for $(date -u +%F) [skip ci]"
+            git push
+          fi
