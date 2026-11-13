@@ -1,95 +1,95 @@
 {
   "build": {
-    "date": "2026-11-12",
+    "date": "2026-11-13",
     "generator": "scripts/daily-generate.mjs",
     "version": 2,
     "source": "deterministic daily generation (no external APIs)"
   },
   "npcs": [
     {
-      "id": "npc-2026-11-12-0",
-      "name": "Yuki Petrov",
-      "role": "cultist",
-      "personality": "coldly rational",
+      "id": "npc-2026-11-13-0",
+      "name": "Ivy Ito",
+      "role": "medic",
+      "personality": "obsessive",
       "fears": [
-        "enclosed spaces",
-        "being forgotten"
+        "mirrors",
+        "the dark"
       ],
-      "secret": "knows a hidden route through the maintenance tunnels",
+      "secret": "remembers a world where none of this happened",
       "traits": [
-        "lucky",
-        "fast"
+        "fast",
+        "lucky"
       ],
-      "spawnHint": "Chapel of Static"
+      "spawnHint": "Old Boiler Room"
     },
     {
-      "id": "npc-2026-11-12-1",
-      "name": "June Petrov",
+      "id": "npc-2026-11-13-1",
+      "name": "Tobias Cruz",
       "role": "scientist",
-      "personality": "paranoid but kind",
+      "personality": "obsessive",
       "fears": [
-        "water",
+        "enclosed spaces",
         "the whispers in the vents"
       ],
-      "secret": "is slowly turning into something else",
+      "secret": "made a deal with the entity in the Heart",
       "traits": [
-        "lucky",
-        "fast"
+        "observant",
+        "lucky"
       ],
       "spawnHint": "Garden of False Dawn"
     },
     {
-      "id": "npc-2026-11-12-2",
-      "name": "Nadia Okafor",
-      "role": "cultist",
-      "personality": "fatalistic",
+      "id": "npc-2026-11-13-2",
+      "name": "Yuki Lindqvist",
+      "role": "informant",
+      "personality": "hysterical",
       "fears": [
-        "mirrors",
-        "the sound of breathing"
+        "the whispers in the vents",
+        "their own reflection"
       ],
-      "secret": "is slowly turning into something else",
+      "secret": "has the key to the east wing barricade",
       "traits": [
-        "fast",
+        "resilient",
         "observant"
       ],
-      "spawnHint": "Chapel of Static"
+      "spawnHint": "Quarantine Ring"
     }
   ],
   "locations": [
     {
-      "id": "loc-2026-11-12-0",
-      "name": "Old Boiler Room",
-      "atmosphere": "The temperature drops sharply. Your breath fogs. Something in the dark breathes with you.",
-      "hazards": [
-        "the Ancient One patrols this ring every few minutes",
-        "unstable lighting — the dark comes without warning"
-      ]
-    },
-    {
-      "id": "loc-2026-11-12-1",
-      "name": "Containment Mezzanine",
+      "id": "loc-2026-11-13-0",
+      "name": "Observation Ward B",
       "atmosphere": "The temperature drops sharply. Your breath fogs. Something in the dark breathes with you.",
       "hazards": [
         "biohazard mist (health drain without a filter)",
-        "the Ancient One patrols this ring every few minutes"
+        "residual temporal discharge (sanity drains near the walls)"
       ]
     },
     {
-      "id": "loc-2026-11-12-2",
-      "name": "Memory Vault",
+      "id": "loc-2026-11-13-1",
+      "name": "Quarantine Ring",
       "atmosphere": "Bioluminescent mold traces the ceiling in patterns that almost form words.",
       "hazards": [
         "residual temporal discharge (sanity drains near the walls)",
-        "biohazard mist (health drain without a filter)"
+        "mimic zones: voices here are not who they claim to be"
+      ]
+    },
+    {
+      "id": "loc-2026-11-13-2",
+      "name": "Garden of False Dawn",
+      "atmosphere": "A low drone vibrates through the floor. The air tastes of copper and old rain.",
+      "hazards": [
+        "unstable lighting — the dark comes without warning",
+        "collapsing floor sections (slow movement required)"
       ]
     }
   ],
   "dialogue": [
-    "\"I counted the screams last night. There were more than there are of us.\"",
-    "\"You shouldn't have come back here. It remembers you now.\"",
     "\"The doors only lock from the inside. Think about what that means.\"",
-    "\"The Heart isn't the source. It's the wound. Something else did the cutting.\""
+    "\"Day 52. The lights went out at 3:04 and never came back properly.\"",
+    "\"If you hear your own voice calling from the vents, do not answer it.\"",
+    "\"You shouldn't have come back here. It remembers you now.\""
   ],
-  "alienBehavior": "K'Thaal update: is mimicking Sarah's voice near the chapel.",
-  "storyBranch": "A survivor offers you a working radio — if you'll retrieve a locket from the Flooded Sublevel."
+  "alienBehavior": "K'Thaal update: moves slower in the cold zones but sees farther.",
+  "storyBranch": "The quarantine door is open for the first time. Nobody who enters has aged since."
 }
