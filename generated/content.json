@@ -1,95 +1,95 @@
 {
   "build": {
-    "date": "2026-11-13",
+    "date": "2026-11-14",
     "generator": "scripts/daily-generate.mjs",
     "version": 2,
     "source": "deterministic daily generation (no external APIs)"
   },
   "npcs": [
     {
-      "id": "npc-2026-11-13-0",
-      "name": "Ivy Ito",
+      "id": "npc-2026-11-14-0",
+      "name": "Sarah Petrov",
       "role": "medic",
-      "personality": "obsessive",
+      "personality": "unnervingly calm",
       "fears": [
-        "mirrors",
-        "the dark"
+        "their own reflection",
+        "the whispers in the vents"
       ],
-      "secret": "remembers a world where none of this happened",
+      "secret": "has the key to the east wing barricade",
       "traits": [
-        "fast",
-        "lucky"
+        "observant",
+        "brave"
       ],
       "spawnHint": "Old Boiler Room"
     },
     {
-      "id": "npc-2026-11-13-1",
-      "name": "Tobias Cruz",
-      "role": "scientist",
-      "personality": "obsessive",
-      "fears": [
-        "enclosed spaces",
-        "the whispers in the vents"
-      ],
-      "secret": "made a deal with the entity in the Heart",
-      "traits": [
-        "observant",
-        "lucky"
-      ],
-      "spawnHint": "Garden of False Dawn"
-    },
-    {
-      "id": "npc-2026-11-13-2",
-      "name": "Yuki Lindqvist",
+      "id": "npc-2026-11-14-1",
+      "name": "Wren Cruz",
       "role": "informant",
       "personality": "hysterical",
       "fears": [
         "the whispers in the vents",
-        "their own reflection"
+        "the dark"
       ],
-      "secret": "has the key to the east wing barricade",
+      "secret": "saw the Ancient One imitate a colleague",
       "traits": [
-        "resilient",
-        "observant"
+        "observant",
+        "resilient"
+      ],
+      "spawnHint": "Observation Ward B"
+    },
+    {
+      "id": "npc-2026-11-14-2",
+      "name": "Mira Reyes",
+      "role": "survivor",
+      "personality": "coldly rational",
+      "fears": [
+        "enclosed spaces",
+        "the dark"
+      ],
+      "secret": "is slowly turning into something else",
+      "traits": [
+        "fast",
+        "brave"
       ],
       "spawnHint": "Quarantine Ring"
     }
   ],
   "locations": [
     {
-      "id": "loc-2026-11-13-0",
-      "name": "Observation Ward B",
-      "atmosphere": "The temperature drops sharply. Your breath fogs. Something in the dark breathes with you.",
-      "hazards": [
-        "biohazard mist (health drain without a filter)",
-        "residual temporal discharge (sanity drains near the walls)"
-      ]
-    },
-    {
-      "id": "loc-2026-11-13-1",
-      "name": "Quarantine Ring",
-      "atmosphere": "Bioluminescent mold traces the ceiling in patterns that almost form words.",
-      "hazards": [
-        "residual temporal discharge (sanity drains near the walls)",
-        "mimic zones: voices here are not who they claim to be"
-      ]
-    },
-    {
-      "id": "loc-2026-11-13-2",
-      "name": "Garden of False Dawn",
-      "atmosphere": "A low drone vibrates through the floor. The air tastes of copper and old rain.",
+      "id": "loc-2026-11-14-0",
+      "name": "The Sculpture Garden",
+      "atmosphere": "Every surface is covered in thin scratches — all at exactly eye height.",
       "hazards": [
         "unstable lighting — the dark comes without warning",
+        "collapsing floor sections (slow movement required)"
+      ]
+    },
+    {
+      "id": "loc-2026-11-14-1",
+      "name": "Quarantine Ring",
+      "atmosphere": "The temperature drops sharply. Your breath fogs. Something in the dark breathes with you.",
+      "hazards": [
+        "residual temporal discharge (sanity drains near the walls)",
+        "biohazard mist (health drain without a filter)"
+      ]
+    },
+    {
+      "id": "loc-2026-11-14-2",
+      "name": "Memory Vault",
+      "atmosphere": "Dust hangs motionless in the air, refusing to settle, as if time here has stopped.",
+      "hazards": [
+        "mimic zones: voices here are not who they claim to be",
         "collapsing floor sections (slow movement required)"
       ]
     }
   ],
   "dialogue": [
+    "\"I counted the screams last night. There were more than there are of us.\"",
+    "\"The Heart isn't the source. It's the wound. Something else did the cutting.\"",
     "\"The doors only lock from the inside. Think about what that means.\"",
-    "\"Day 52. The lights went out at 3:04 and never came back properly.\"",
-    "\"If you hear your own voice calling from the vents, do not answer it.\"",
     "\"You shouldn't have come back here. It remembers you now.\""
   ],
-  "alienBehavior": "K'Thaal update: moves slower in the cold zones but sees farther.",
-  "storyBranch": "The quarantine door is open for the first time. Nobody who enters has aged since."
+  "alienBehavior": "K'Thaal update: has learned the locker routes; hiding spots shift value.",
+  "storyBranch": "A survivor offers you a working radio — if you'll retrieve a locket from the Flooded Sublevel."
 }
