@@ -1,83 +1,83 @@
 {
   "build": {
-    "date": "2026-11-16",
+    "date": "2026-11-17",
     "generator": "scripts/daily-generate.mjs",
     "version": 2,
     "source": "deterministic daily generation (no external APIs)"
   },
   "npcs": [
     {
-      "id": "npc-2026-11-16-0",
-      "name": "Silas Petrov",
-      "role": "survivor",
-      "personality": "sarcastic under pressure",
+      "id": "npc-2026-11-17-0",
+      "name": "Nadia Petrov",
+      "role": "child",
+      "personality": "hysterical",
       "fears": [
         "the sound of breathing",
-        "water"
-      ],
-      "secret": "has the key to the east wing barricade",
-      "traits": [
-        "resilient",
-        "lucky"
-      ],
-      "spawnHint": "Garden of False Dawn"
-    },
-    {
-      "id": "npc-2026-11-16-1",
-      "name": "Yuki Okafor",
-      "role": "guard",
-      "personality": "sarcastic under pressure",
-      "fears": [
-        "being forgotten",
-        "the sound of breathing"
+        "enclosed spaces"
       ],
       "secret": "knows a hidden route through the maintenance tunnels",
       "traits": [
-        "quiet",
-        "fast"
-      ],
-      "spawnHint": "Observation Ward B"
-    },
-    {
-      "id": "npc-2026-11-16-2",
-      "name": "Ivy Okafor",
-      "role": "guard",
-      "personality": "obsessive",
-      "fears": [
-        "the whispers in the vents",
-        "enclosed spaces"
-      ],
-      "secret": "saw the Ancient One imitate a colleague",
-      "traits": [
-        "observant",
-        "resilient"
+        "lucky",
+        "brave"
       ],
       "spawnHint": "Containment Mezzanine"
+    },
+    {
+      "id": "npc-2026-11-17-1",
+      "name": "June Hale",
+      "role": "survivor",
+      "personality": "unnervingly calm",
+      "fears": [
+        "the dark",
+        "mirrors"
+      ],
+      "secret": "made a deal with the entity in the Heart",
+      "traits": [
+        "fast",
+        "quiet"
+      ],
+      "spawnHint": "Containment Mezzanine"
+    },
+    {
+      "id": "npc-2026-11-17-2",
+      "name": "Marcus Hale",
+      "role": "scientist",
+      "personality": "coldly rational",
+      "fears": [
+        "mirrors",
+        "the dark"
+      ],
+      "secret": "made a deal with the entity in the Heart",
+      "traits": [
+        "resilient",
+        "observant"
+      ],
+      "spawnHint": "Chapel of Static"
     }
   ],
   "locations": [
     {
-      "id": "loc-2026-11-16-0",
-      "name": "Observation Ward B",
-      "atmosphere": "Dust hangs motionless in the air, refusing to settle, as if time here has stopped.",
-      "hazards": [
-        "residual temporal discharge (sanity drains near the walls)",
-        "the Ancient One patrols this ring every few minutes"
-      ]
-    },
-    {
-      "id": "loc-2026-11-16-1",
-      "name": "Quarantine Ring",
+      "id": "loc-2026-11-17-0",
+      "name": "Memory Vault",
       "atmosphere": "Emergency lights pulse like a slow heartbeat; the walls sweat condensation that never dries.",
       "hazards": [
-        "collapsing floor sections (slow movement required)",
-        "biohazard mist (health drain without a filter)"
+        "residual temporal discharge (sanity drains near the walls)",
+        "unstable lighting — the dark comes without warning"
       ]
     },
     {
-      "id": "loc-2026-11-16-2",
-      "name": "The Sculpture Garden",
+      "id": "loc-2026-11-17-1",
+      "name": "The Whispering Stairwell",
       "atmosphere": "Bioluminescent mold traces the ceiling in patterns that almost form words.",
+      "hazards": [
+        "collapsing floor sections (slow movement required)",
+        "residual temporal discharge (sanity drains near the walls)"
+      ]
+    },
+    {
+      "id": "loc-2026-11-17-2",
+      "name": "Containment Mezzanine",
+      "atmosphere": "Emergency lights pulse like a slow heartbeat; the walls sweat condensation that never dries.",
       "hazards": [
         "unstable lighting — the dark comes without warning",
         "residual temporal discharge (sanity drains near the walls)"
@@ -85,11 +85,11 @@
     }
   ],
   "dialogue": [
-    "\"It wears faces. If you see someone you lost — run.\"",
-    "\"The doors only lock from the inside. Think about what that means.\"",
-    "\"Don't trust the version of me that's kind. I've never been kind.\"",
-    "\"Day 52. The lights went out at 3:04 and never came back properly.\""
+    "\"You shouldn't have come back here. It remembers you now.\"",
+    "\"I counted the screams last night. There were more than there are of us.\"",
+    "\"If you hear your own voice calling from the vents, do not answer it.\"",
+    "\"The doors only lock from the inside. Think about what that means.\""
   ],
-  "alienBehavior": "K'Thaal update: moves slower in the cold zones but sees farther.",
-  "storyBranch": "The quarantine door is open for the first time. Nobody who enters has aged since."
+  "alienBehavior": "K'Thaal update: abandons chases after 20 seconds unless you look back.",
+  "storyBranch": "The entity leaves a gift outside the safe room: a photograph of you, taken from behind, tonight."
 }
