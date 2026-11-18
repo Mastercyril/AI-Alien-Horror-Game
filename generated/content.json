@@ -1,95 +1,95 @@
 {
   "build": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "generator": "scripts/daily-generate.mjs",
     "version": 2,
     "source": "deterministic daily generation (no external APIs)"
   },
   "npcs": [
     {
-      "id": "npc-2026-11-17-0",
-      "name": "Nadia Petrov",
-      "role": "child",
-      "personality": "hysterical",
+      "id": "npc-2026-11-18-0",
+      "name": "Dahlia Cruz",
+      "role": "informant",
+      "personality": "fatalistic",
       "fears": [
-        "the sound of breathing",
-        "enclosed spaces"
+        "being forgotten",
+        "water"
       ],
-      "secret": "knows a hidden route through the maintenance tunnels",
+      "secret": "is slowly turning into something else",
       "traits": [
-        "lucky",
-        "brave"
+        "observant",
+        "lucky"
       ],
-      "spawnHint": "Containment Mezzanine"
+      "spawnHint": "Observation Ward B"
     },
     {
-      "id": "npc-2026-11-17-1",
-      "name": "June Hale",
-      "role": "survivor",
-      "personality": "unnervingly calm",
-      "fears": [
-        "the dark",
-        "mirrors"
-      ],
-      "secret": "made a deal with the entity in the Heart",
-      "traits": [
-        "fast",
-        "quiet"
-      ],
-      "spawnHint": "Containment Mezzanine"
-    },
-    {
-      "id": "npc-2026-11-17-2",
-      "name": "Marcus Hale",
-      "role": "scientist",
-      "personality": "coldly rational",
+      "id": "npc-2026-11-18-1",
+      "name": "Sarah Ito",
+      "role": "informant",
+      "personality": "obsessive",
       "fears": [
         "mirrors",
-        "the dark"
+        "the whispers in the vents"
+      ],
+      "secret": "saw the Ancient One imitate a colleague",
+      "traits": [
+        "lucky",
+        "observant"
+      ],
+      "spawnHint": "Flooded Sublevel"
+    },
+    {
+      "id": "npc-2026-11-18-2",
+      "name": "Mira Okafor",
+      "role": "medic",
+      "personality": "paranoid but kind",
+      "fears": [
+        "the whispers in the vents",
+        "the sound of breathing"
       ],
       "secret": "made a deal with the entity in the Heart",
       "traits": [
         "resilient",
-        "observant"
+        "quiet"
       ],
       "spawnHint": "Chapel of Static"
     }
   ],
   "locations": [
     {
-      "id": "loc-2026-11-17-0",
-      "name": "Memory Vault",
+      "id": "loc-2026-11-18-0",
+      "name": "Flooded Sublevel",
       "atmosphere": "Emergency lights pulse like a slow heartbeat; the walls sweat condensation that never dries.",
       "hazards": [
         "residual temporal discharge (sanity drains near the walls)",
-        "unstable lighting — the dark comes without warning"
+        "biohazard mist (health drain without a filter)"
       ]
     },
     {
-      "id": "loc-2026-11-17-1",
+      "id": "loc-2026-11-18-1",
       "name": "The Whispering Stairwell",
-      "atmosphere": "Bioluminescent mold traces the ceiling in patterns that almost form words.",
+      "atmosphere": "Every surface is covered in thin scratches — all at exactly eye height.",
       "hazards": [
-        "collapsing floor sections (slow movement required)",
+        "the Ancient One patrols this ring every few minutes",
         "residual temporal discharge (sanity drains near the walls)"
       ]
     },
     {
-      "id": "loc-2026-11-17-2",
+      "id": "loc-2026-11-18-2",
       "name": "Containment Mezzanine",
-      "atmosphere": "Emergency lights pulse like a slow heartbeat; the walls sweat condensation that never dries.",
+      "atmosphere": "Every surface is covered in thin scratches — all at exactly eye height.",
       "hazards": [
-        "unstable lighting — the dark comes without warning",
-        "residual temporal discharge (sanity drains near the walls)"
+        "mimic zones: voices here are not who they claim to be",
+        "unstable lighting — the dark comes without warning"
       ]
     }
   ],
   "dialogue": [
-    "\"You shouldn't have come back here. It remembers you now.\"",
-    "\"I counted the screams last night. There were more than there are of us.\"",
     "\"If you hear your own voice calling from the vents, do not answer it.\"",
+    "\"The Heart isn't the source. It's the wound. Something else did the cutting.\"",
+    "\"Day 52. The lights went out at 3:04 and never came back properly.\"",
     "\"The doors only lock from the inside. Think about what that means.\""
   ],
-  "alienBehavior": "K'Thaal update: abandons chases after 20 seconds unless you look back.",
+  "alienBehavior": "K'Thaal update: patrols in counter-clockwise loops, faster after each kill.",
   "storyBranch": "The entity leaves a gift outside the safe room: a photograph of you, taken from behind, tonight."
 }
