@@ -1,95 +1,95 @@
 {
   "build": {
-    "date": "2026-11-18",
+    "date": "2026-11-19",
     "generator": "scripts/daily-generate.mjs",
     "version": 2,
     "source": "deterministic daily generation (no external APIs)"
   },
   "npcs": [
     {
-      "id": "npc-2026-11-18-0",
-      "name": "Dahlia Cruz",
-      "role": "informant",
-      "personality": "fatalistic",
+      "id": "npc-2026-11-19-0",
+      "name": "Roman Okafor",
+      "role": "survivor",
+      "personality": "unnervingly calm",
+      "fears": [
+        "enclosed spaces",
+        "the whispers in the vents"
+      ],
+      "secret": "has the key to the east wing barricade",
+      "traits": [
+        "brave",
+        "fast"
+      ],
+      "spawnHint": "Quarantine Ring"
+    },
+    {
+      "id": "npc-2026-11-19-1",
+      "name": "Wren Reyes",
+      "role": "medic",
+      "personality": "coldly rational",
+      "fears": [
+        "enclosed spaces",
+        "the sound of breathing"
+      ],
+      "secret": "was paid to keep the containment logs quiet",
+      "traits": [
+        "brave",
+        "quiet"
+      ],
+      "spawnHint": "Containment Mezzanine"
+    },
+    {
+      "id": "npc-2026-11-19-2",
+      "name": "Kade Nakamura",
+      "role": "engineer",
+      "personality": "hysterical",
       "fears": [
         "being forgotten",
-        "water"
+        "the sound of breathing"
       ],
       "secret": "is slowly turning into something else",
       "traits": [
-        "observant",
+        "brave",
         "lucky"
       ],
       "spawnHint": "Observation Ward B"
-    },
-    {
-      "id": "npc-2026-11-18-1",
-      "name": "Sarah Ito",
-      "role": "informant",
-      "personality": "obsessive",
-      "fears": [
-        "mirrors",
-        "the whispers in the vents"
-      ],
-      "secret": "saw the Ancient One imitate a colleague",
-      "traits": [
-        "lucky",
-        "observant"
-      ],
-      "spawnHint": "Flooded Sublevel"
-    },
-    {
-      "id": "npc-2026-11-18-2",
-      "name": "Mira Okafor",
-      "role": "medic",
-      "personality": "paranoid but kind",
-      "fears": [
-        "the whispers in the vents",
-        "the sound of breathing"
-      ],
-      "secret": "made a deal with the entity in the Heart",
-      "traits": [
-        "resilient",
-        "quiet"
-      ],
-      "spawnHint": "Chapel of Static"
     }
   ],
   "locations": [
     {
-      "id": "loc-2026-11-18-0",
-      "name": "Flooded Sublevel",
+      "id": "loc-2026-11-19-0",
+      "name": "Chapel of Static",
       "atmosphere": "Emergency lights pulse like a slow heartbeat; the walls sweat condensation that never dries.",
       "hazards": [
-        "residual temporal discharge (sanity drains near the walls)",
-        "biohazard mist (health drain without a filter)"
-      ]
-    },
-    {
-      "id": "loc-2026-11-18-1",
-      "name": "The Whispering Stairwell",
-      "atmosphere": "Every surface is covered in thin scratches — all at exactly eye height.",
-      "hazards": [
-        "the Ancient One patrols this ring every few minutes",
+        "unstable lighting — the dark comes without warning",
         "residual temporal discharge (sanity drains near the walls)"
       ]
     },
     {
-      "id": "loc-2026-11-18-2",
-      "name": "Containment Mezzanine",
-      "atmosphere": "Every surface is covered in thin scratches — all at exactly eye height.",
+      "id": "loc-2026-11-19-1",
+      "name": "Old Boiler Room",
+      "atmosphere": "The temperature drops sharply. Your breath fogs. Something in the dark breathes with you.",
       "hazards": [
-        "mimic zones: voices here are not who they claim to be",
+        "biohazard mist (health drain without a filter)",
         "unstable lighting — the dark comes without warning"
+      ]
+    },
+    {
+      "id": "loc-2026-11-19-2",
+      "name": "The Sculpture Garden",
+      "atmosphere": "The temperature drops sharply. Your breath fogs. Something in the dark breathes with you.",
+      "hazards": [
+        "residual temporal discharge (sanity drains near the walls)",
+        "mimic zones: voices here are not who they claim to be"
       ]
     }
   ],
   "dialogue": [
-    "\"If you hear your own voice calling from the vents, do not answer it.\"",
-    "\"The Heart isn't the source. It's the wound. Something else did the cutting.\"",
     "\"Day 52. The lights went out at 3:04 and never came back properly.\"",
-    "\"The doors only lock from the inside. Think about what that means.\""
+    "\"I counted the screams last night. There were more than there are of us.\"",
+    "\"If you hear your own voice calling from the vents, do not answer it.\"",
+    "\"It wears faces. If you see someone you lost — run.\""
   ],
-  "alienBehavior": "K'Thaal update: patrols in counter-clockwise loops, faster after each kill.",
+  "alienBehavior": "K'Thaal update: moves slower in the cold zones but sees farther.",
   "storyBranch": "The entity leaves a gift outside the safe room: a photograph of you, taken from behind, tonight."
 }
