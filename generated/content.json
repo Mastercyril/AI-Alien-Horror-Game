@@ -1,95 +1,95 @@
 {
   "build": {
-    "date": "2026-11-24",
+    "date": "2026-11-25",
     "generator": "scripts/daily-generate.mjs",
     "version": 2,
     "source": "deterministic daily generation (no external APIs)"
   },
   "npcs": [
     {
-      "id": "npc-2026-11-24-0",
-      "name": "Marcus Vance",
-      "role": "child",
-      "personality": "hysterical",
+      "id": "npc-2026-11-25-0",
+      "name": "Sarah Ito",
+      "role": "informant",
+      "personality": "fatalistic",
       "fears": [
         "the dark",
         "being forgotten"
       ],
-      "secret": "made a deal with the entity in the Heart",
+      "secret": "is slowly turning into something else",
       "traits": [
         "brave",
-        "observant"
+        "resilient"
       ],
-      "spawnHint": "Quarantine Ring"
+      "spawnHint": "Chapel of Static"
     },
     {
-      "id": "npc-2026-11-24-1",
-      "name": "Yuki Mercer",
+      "id": "npc-2026-11-25-1",
+      "name": "June Reyes",
+      "role": "informant",
+      "personality": "devout",
+      "fears": [
+        "the dark",
+        "water"
+      ],
+      "secret": "remembers a world where none of this happened",
+      "traits": [
+        "observant",
+        "lucky"
+      ],
+      "spawnHint": "Garden of False Dawn"
+    },
+    {
+      "id": "npc-2026-11-25-2",
+      "name": "Kade Ito",
       "role": "informant",
       "personality": "obsessive",
       "fears": [
         "the sound of breathing",
-        "their own reflection"
+        "the whispers in the vents"
       ],
-      "secret": "was paid to keep the containment logs quiet",
+      "secret": "has the key to the east wing barricade",
       "traits": [
-        "observant",
-        "resilient"
+        "quiet",
+        "lucky"
       ],
-      "spawnHint": "The Whispering Stairwell"
-    },
-    {
-      "id": "npc-2026-11-24-2",
-      "name": "Elias Nakamura",
-      "role": "medic",
-      "personality": "obsessive",
-      "fears": [
-        "water",
-        "the sound of breathing"
-      ],
-      "secret": "made a deal with the entity in the Heart",
-      "traits": [
-        "brave",
-        "resilient"
-      ],
-      "spawnHint": "Quarantine Ring"
+      "spawnHint": "Observation Ward B"
     }
   ],
   "locations": [
     {
-      "id": "loc-2026-11-24-0",
-      "name": "The Sculpture Garden",
-      "atmosphere": "Emergency lights pulse like a slow heartbeat; the walls sweat condensation that never dries.",
-      "hazards": [
-        "mimic zones: voices here are not who they claim to be",
-        "biohazard mist (health drain without a filter)"
-      ]
-    },
-    {
-      "id": "loc-2026-11-24-1",
-      "name": "Garden of False Dawn",
-      "atmosphere": "The temperature drops sharply. Your breath fogs. Something in the dark breathes with you.",
-      "hazards": [
-        "residual temporal discharge (sanity drains near the walls)",
-        "biohazard mist (health drain without a filter)"
-      ]
-    },
-    {
-      "id": "loc-2026-11-24-2",
-      "name": "Memory Vault",
-      "atmosphere": "Emergency lights pulse like a slow heartbeat; the walls sweat condensation that never dries.",
+      "id": "loc-2026-11-25-0",
+      "name": "Containment Mezzanine",
+      "atmosphere": "A low drone vibrates through the floor. The air tastes of copper and old rain.",
       "hazards": [
         "the Ancient One patrols this ring every few minutes",
         "mimic zones: voices here are not who they claim to be"
+      ]
+    },
+    {
+      "id": "loc-2026-11-25-1",
+      "name": "Memory Vault",
+      "atmosphere": "A low drone vibrates through the floor. The air tastes of copper and old rain.",
+      "hazards": [
+        "residual temporal discharge (sanity drains near the walls)",
+        "the Ancient One patrols this ring every few minutes"
+      ]
+    },
+    {
+      "id": "loc-2026-11-25-2",
+      "name": "The Whispering Stairwell",
+      "atmosphere": "Every surface is covered in thin scratches — all at exactly eye height.",
+      "hazards": [
+        "collapsing floor sections (slow movement required)",
+        "biohazard mist (health drain without a filter)"
       ]
     }
   ],
   "dialogue": [
     "\"You shouldn't have come back here. It remembers you now.\"",
-    "\"If you hear your own voice calling from the vents, do not answer it.\"",
+    "\"Day 52. The lights went out at 3:04 and never came back properly.\"",
     "\"I counted the screams last night. There were more than there are of us.\"",
-    "\"Day 52. The lights went out at 3:04 and never came back properly.\""
+    "\"If you hear your own voice calling from the vents, do not answer it.\""
   ],
-  "alienBehavior": "K'Thaal update: abandons chases after 20 seconds unless you look back.",
-  "storyBranch": "All the clocks reset to 3:04 AM. Something wants that moment to happen again."
+  "alienBehavior": "K'Thaal update: hunts by sound tonight — sprinting is suicide.",
+  "storyBranch": "A survivor offers you a working radio — if you'll retrieve a locket from the Flooded Sublevel."
 }
