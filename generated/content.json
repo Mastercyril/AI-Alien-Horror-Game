@@ -1,95 +1,95 @@
 {
   "build": {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "generator": "scripts/daily-generate.mjs",
     "version": 2,
     "source": "deterministic daily generation (no external APIs)"
   },
   "npcs": [
     {
-      "id": "npc-2026-11-25-0",
-      "name": "Sarah Ito",
-      "role": "informant",
-      "personality": "fatalistic",
+      "id": "npc-2026-11-26-0",
+      "name": "Elias Reyes",
+      "role": "guard",
+      "personality": "paranoid but kind",
       "fears": [
-        "the dark",
-        "being forgotten"
+        "mirrors",
+        "their own reflection"
       ],
-      "secret": "is slowly turning into something else",
-      "traits": [
-        "brave",
-        "resilient"
-      ],
-      "spawnHint": "Chapel of Static"
-    },
-    {
-      "id": "npc-2026-11-25-1",
-      "name": "June Reyes",
-      "role": "informant",
-      "personality": "devout",
-      "fears": [
-        "the dark",
-        "water"
-      ],
-      "secret": "remembers a world where none of this happened",
+      "secret": "was paid to keep the containment logs quiet",
       "traits": [
         "observant",
         "lucky"
       ],
-      "spawnHint": "Garden of False Dawn"
+      "spawnHint": "Containment Mezzanine"
     },
     {
-      "id": "npc-2026-11-25-2",
-      "name": "Kade Ito",
-      "role": "informant",
+      "id": "npc-2026-11-26-1",
+      "name": "Marcus Vance",
+      "role": "child",
       "personality": "obsessive",
       "fears": [
-        "the sound of breathing",
-        "the whispers in the vents"
+        "the dark",
+        "water"
       ],
-      "secret": "has the key to the east wing barricade",
+      "secret": "was paid to keep the containment logs quiet",
       "traits": [
-        "quiet",
-        "lucky"
+        "lucky",
+        "observant"
       ],
-      "spawnHint": "Observation Ward B"
+      "spawnHint": "The Whispering Stairwell"
+    },
+    {
+      "id": "npc-2026-11-26-2",
+      "name": "Roman Hale",
+      "role": "cultist",
+      "personality": "sarcastic under pressure",
+      "fears": [
+        "being forgotten",
+        "their own reflection"
+      ],
+      "secret": "is slowly turning into something else",
+      "traits": [
+        "lucky",
+        "observant"
+      ],
+      "spawnHint": "The Sculpture Garden"
     }
   ],
   "locations": [
     {
-      "id": "loc-2026-11-25-0",
+      "id": "loc-2026-11-26-0",
       "name": "Containment Mezzanine",
-      "atmosphere": "A low drone vibrates through the floor. The air tastes of copper and old rain.",
-      "hazards": [
-        "the Ancient One patrols this ring every few minutes",
-        "mimic zones: voices here are not who they claim to be"
-      ]
-    },
-    {
-      "id": "loc-2026-11-25-1",
-      "name": "Memory Vault",
-      "atmosphere": "A low drone vibrates through the floor. The air tastes of copper and old rain.",
-      "hazards": [
-        "residual temporal discharge (sanity drains near the walls)",
-        "the Ancient One patrols this ring every few minutes"
-      ]
-    },
-    {
-      "id": "loc-2026-11-25-2",
-      "name": "The Whispering Stairwell",
       "atmosphere": "Every surface is covered in thin scratches — all at exactly eye height.",
       "hazards": [
         "collapsing floor sections (slow movement required)",
+        "residual temporal discharge (sanity drains near the walls)"
+      ]
+    },
+    {
+      "id": "loc-2026-11-26-1",
+      "name": "Chapel of Static",
+      "atmosphere": "Dust hangs motionless in the air, refusing to settle, as if time here has stopped.",
+      "hazards": [
+        "mimic zones: voices here are not who they claim to be",
         "biohazard mist (health drain without a filter)"
+      ]
+    },
+    {
+      "id": "loc-2026-11-26-2",
+      "name": "Observation Ward B",
+      "atmosphere": "Emergency lights pulse like a slow heartbeat; the walls sweat condensation that never dries.",
+      "hazards": [
+        "unstable lighting — the dark comes without warning",
+        "the Ancient One patrols this ring every few minutes"
       ]
     }
   ],
   "dialogue": [
-    "\"You shouldn't have come back here. It remembers you now.\"",
-    "\"Day 52. The lights went out at 3:04 and never came back properly.\"",
+    "\"The Heart isn't the source. It's the wound. Something else did the cutting.\"",
+    "\"Don't trust the version of me that's kind. I've never been kind.\"",
     "\"I counted the screams last night. There were more than there are of us.\"",
-    "\"If you hear your own voice calling from the vents, do not answer it.\""
+    "\"You shouldn't have come back here. It remembers you now.\""
   ],
-  "alienBehavior": "K'Thaal update: hunts by sound tonight — sprinting is suicide.",
-  "storyBranch": "A survivor offers you a working radio — if you'll retrieve a locket from the Flooded Sublevel."
+  "alienBehavior": "K'Thaal update: abandons chases after 20 seconds unless you look back.",
+  "storyBranch": "The quarantine door is open for the first time. Nobody who enters has aged since."
 }
