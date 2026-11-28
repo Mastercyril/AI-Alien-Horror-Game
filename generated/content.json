@@ -1,95 +1,95 @@
 {
   "build": {
-    "date": "2026-11-27",
+    "date": "2026-11-28",
     "generator": "scripts/daily-generate.mjs",
     "version": 2,
     "source": "deterministic daily generation (no external APIs)"
   },
   "npcs": [
     {
-      "id": "npc-2026-11-27-0",
-      "name": "Elias Reyes",
-      "role": "child",
-      "personality": "sarcastic under pressure",
+      "id": "npc-2026-11-28-0",
+      "name": "Elias Vance",
+      "role": "guard",
+      "personality": "unnervingly calm",
       "fears": [
-        "the whispers in the vents",
+        "the dark",
         "being forgotten"
       ],
       "secret": "saw the Ancient One imitate a colleague",
       "traits": [
-        "lucky",
+        "resilient",
         "quiet"
       ],
-      "spawnHint": "Old Boiler Room"
+      "spawnHint": "Chapel of Static"
     },
     {
-      "id": "npc-2026-11-27-1",
-      "name": "Rosa Ashford",
-      "role": "informant",
-      "personality": "paranoid but kind",
+      "id": "npc-2026-11-28-1",
+      "name": "Nadia Voss",
+      "role": "guard",
+      "personality": "unnervingly calm",
       "fears": [
-        "the dark",
-        "enclosed spaces"
+        "mirrors",
+        "water"
       ],
-      "secret": "has the key to the east wing barricade",
-      "traits": [
-        "brave",
-        "observant"
-      ],
-      "spawnHint": "The Sculpture Garden"
-    },
-    {
-      "id": "npc-2026-11-27-2",
-      "name": "Wren Hale",
-      "role": "cultist",
-      "personality": "devout",
-      "fears": [
-        "water",
-        "mirrors"
-      ],
-      "secret": "is slowly turning into something else",
+      "secret": "made a deal with the entity in the Heart",
       "traits": [
         "fast",
         "lucky"
       ],
-      "spawnHint": "The Sculpture Garden"
+      "spawnHint": "Memory Vault"
+    },
+    {
+      "id": "npc-2026-11-28-2",
+      "name": "Yuki Nakamura",
+      "role": "engineer",
+      "personality": "coldly rational",
+      "fears": [
+        "mirrors",
+        "their own reflection"
+      ],
+      "secret": "knows a hidden route through the maintenance tunnels",
+      "traits": [
+        "resilient",
+        "brave"
+      ],
+      "spawnHint": "Memory Vault"
     }
   ],
   "locations": [
     {
-      "id": "loc-2026-11-27-0",
-      "name": "Containment Mezzanine",
-      "atmosphere": "Dust hangs motionless in the air, refusing to settle, as if time here has stopped.",
-      "hazards": [
-        "residual temporal discharge (sanity drains near the walls)",
-        "unstable lighting — the dark comes without warning"
-      ]
-    },
-    {
-      "id": "loc-2026-11-27-1",
-      "name": "Memory Vault",
+      "id": "loc-2026-11-28-0",
+      "name": "Old Boiler Room",
       "atmosphere": "Bioluminescent mold traces the ceiling in patterns that almost form words.",
       "hazards": [
         "biohazard mist (health drain without a filter)",
-        "the Ancient One patrols this ring every few minutes"
+        "collapsing floor sections (slow movement required)"
       ]
     },
     {
-      "id": "loc-2026-11-27-2",
-      "name": "Flooded Sublevel",
-      "atmosphere": "Dust hangs motionless in the air, refusing to settle, as if time here has stopped.",
+      "id": "loc-2026-11-28-1",
+      "name": "The Sculpture Garden",
+      "atmosphere": "A low drone vibrates through the floor. The air tastes of copper and old rain.",
       "hazards": [
-        "mimic zones: voices here are not who they claim to be",
-        "unstable lighting — the dark comes without warning"
+        "biohazard mist (health drain without a filter)",
+        "residual temporal discharge (sanity drains near the walls)"
+      ]
+    },
+    {
+      "id": "loc-2026-11-28-2",
+      "name": "Quarantine Ring",
+      "atmosphere": "A low drone vibrates through the floor. The air tastes of copper and old rain.",
+      "hazards": [
+        "biohazard mist (health drain without a filter)",
+        "residual temporal discharge (sanity drains near the walls)"
       ]
     }
   ],
   "dialogue": [
-    "\"Don't trust the version of me that's kind. I've never been kind.\"",
-    "\"It wears faces. If you see someone you lost — run.\"",
     "\"Day 52. The lights went out at 3:04 and never came back properly.\"",
-    "\"If you hear your own voice calling from the vents, do not answer it.\""
+    "\"The Heart isn't the source. It's the wound. Something else did the cutting.\"",
+    "\"The doors only lock from the inside. Think about what that means.\"",
+    "\"It wears faces. If you see someone you lost — run.\""
   ],
-  "alienBehavior": "K'Thaal update: patrols in counter-clockwise loops, faster after each kill.",
-  "storyBranch": "A power fluctuation reveals a corridor that isn't on any map. It smells of your childhood home."
+  "alienBehavior": "K'Thaal update: hunts by sound tonight — sprinting is suicide.",
+  "storyBranch": "A survivor offers you a working radio — if you'll retrieve a locket from the Flooded Sublevel."
 }
